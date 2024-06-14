@@ -1,0 +1,11 @@
+﻿@inject NavigationManager _navigationManager;
+
+@code {
+
+	protected override void OnAfterRender(bool firstRender)
+	{
+		base.OnAfterRender(firstRender);
+		_navigationManager.NavigateTo("Identity/Accounts/Login", true); //forceLoad is set to true, reloads until satisfied
+
+	}
+}

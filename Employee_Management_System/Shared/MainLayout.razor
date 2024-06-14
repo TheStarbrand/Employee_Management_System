@@ -1,0 +1,28 @@
+﻿@inherits LayoutComponentBase
+
+<PageTitle>Soft Systems</PageTitle>
+    <AuthorizeView>
+    <Authorized>
+        <h3>Authorized</h3>
+        <div class="page">
+            <div class="sidebar">
+                <NavMenu />
+            </div>
+
+            <main>
+                <article class="content px-4">
+                    @Body
+                </article>
+            </main>
+        </div>
+    </Authorized>
+
+    <NotAuthorized>
+        <h3>Not Authorized, Redirected to Login Page</h3>
+        <RedirectToLogin></RedirectToLogin>
+    
+        
+    </NotAuthorized>
+
+</AuthorizeView>
+
